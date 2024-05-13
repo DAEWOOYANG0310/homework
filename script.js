@@ -42,7 +42,7 @@ const person = {
   나이: 26,
 };
 console.log("이름:" + person.이름);
-console.log("이름:" + person.나이);
+console.log("나이:" + person.나이);
 
 const { 이름, 나이 } = person;
 console.log(`이름:${이름}
