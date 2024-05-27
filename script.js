@@ -23,14 +23,16 @@ const removed = localStorage.getItem("user");
 console.log(removed);
 
 // 문제1) 아래 API 문서를 확인하고, 게시물 목록을 조회하여 콘솔에 출력해보세요.
+
 fetch("https://jsonplaceholder.typicode.com/posts")
   .then((response) => response.json())
   .then((data) => {
     data.forEach((post) => {
-      console.log(`ID: ${post.id}`);
-      console.log(`Title: ${post.title}`);
-      console.log(`Body: ${post.body}`);
-      console.log(`User ID: ${post.userId}`);
+      const { id, title, body, userId } = post;
+      console.log(`ID: ${id}`);
+      console.log(`Title: ${title}`);
+      console.log(`Body: ${body}`);
+      console.log(`User ID: ${userId}`);
       console.log("-------------------");
     });
   })
